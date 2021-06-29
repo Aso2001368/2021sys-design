@@ -1,7 +1,7 @@
 ### データベース詳細
 *****
 
-## d_purchase
+# d_purchase
 
 |属性名| 型 | PK | NN | FK |
 |-----|----|----|----|----|
@@ -10,4 +10,4 @@
 |purchase_date|date|NOT NULL|||
 |total_price|int(11)|NOT NULL|PRIMARY KEY(order_id)||
 
-## d_purchase_detail
+# d_purchase_detail
