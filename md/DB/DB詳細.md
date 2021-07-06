@@ -5,10 +5,10 @@ d_purchase
 
 |属性名| 型 | PK | NN | FK |
 |-----|----|----|----|----|
-|order_id|bigint(20)|NOT NULL|AUTO_INCREMENT||
-|customer_code|varchar(50)|NOT NULL||| 
-|purchase_date|date|NOT NULL|||
-|total_price|int(11)|NOT NULL|PRIMARY KEY(order_id)||
+|order_id|bigint(20)|〇|〇||
+|customer_code|varchar(50)||〇|| 
+|purchase_date|date||〇||
+|total_price|int(11)||〇||
 
 d_purchase_detail
 |属性名| 型 | PK | NN | FK |
@@ -22,14 +22,14 @@ d_purchase_detail
 m_customers
 |属性名| 型 | PK | NN | FK |
 |-----|----|----|----|----|
-|customer_code|varchar(50)|NOT NULL|DEFAULT ''||
-|pass|varchar(50)|NOT NULL|||
-|name|varchar(20)|NOT NULL|||
-|address|varchar(100)|NOT NULL|||
-|tel|varchar(20)|NOT NULL|||
-|mail|varchar(100)|NOT NULL| ||
-|del_flag|int(1)|DEFAULT NULL|||
-|reg_date|date|NOT NULL|PRIMARY KEY (customer_code)| |
+|customer_code|varchar(50)||||
+|pass|varchar(50)||||
+|name|varchar(20)||||
+|address|varchar(100)||||
+|tel|varchar(20)||||
+|mail|varchar(100)|| ||
+|del_flag|int(1)||||
+|reg_date|date||||
 
 m_category
 |属性名| 型 | PK | NN | FK |
