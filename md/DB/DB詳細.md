@@ -1,8 +1,7 @@
 ### データベース詳細
 *****
 
-d_purchase
-
+### d_purchase
 |属性名| 型 | PK | NN | FK |
 |-----|----|----|----|----|
 |order_id|bigint(20)|〇|〇||
@@ -10,7 +9,7 @@ d_purchase
 |purchase_date|date||〇||
 |total_price|int(11)||〇||
 
-d_purchase_detail
+### d_purchase_detail
 |属性名| 型 | PK | NN | FK |
 |-----|----|----|----|----|
 |detail_id|bigint(20)|〇|〇|| 
@@ -19,7 +18,7 @@ d_purchase_detail
 |price|int(11)||〇||
 |num|int(11)||〇||
 
-m_customers
+### m_customers
 |属性名| 型 | PK | NN | FK |
 |-----|----|----|----|----|
 |customer_code|varchar(50)|〇|〇||
@@ -31,14 +30,14 @@ m_customers
 |del_flag|int(1)||||
 |reg_date|date||〇||
 
-m_category
+### m_category
 |属性名| 型 | PK | NN | FK |
 |-----|----|----|----|----|
 |category_id|int(11)|〇|〇||
 |name|varchar(20)||〇||
 |reg_date|date||〇||
 
-m_items
+### m_items
 |属性名| 型 | PK | NN | FK |
 |-----|----|----|----|----|
 |item_code|int(11)|〇|〇||
@@ -49,10 +48,3 @@ m_items
 |detail|varchar(500)||||
 |del_flag|int(11)||||
 |reg_date|date||〇||
-
-
-
-
-
-
-
