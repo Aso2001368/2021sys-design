@@ -10,7 +10,7 @@ skinparam class {
     ArrowColor Black
 }
 
-package "本の帯を売買するサイト" as target_system {
+package "本の帯を売買するショッピングサイト" as target_system {
 
 entity "顧客マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>> {
   + customer_code [PK]
