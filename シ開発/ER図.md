@@ -10,7 +10,7 @@ skinparam class {
     ArrowColor Black
 }
 
-package "ECサイト" as target_system {
+package "本の帯を売買するサイト" as target_system {
 
 entity "顧客マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>> {
   + customer_code [PK]
@@ -24,15 +24,15 @@ entity "顧客マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>> {
   reg_date
   }
 
-entity "購入テーブル" as purchase <d_purchase><<T,TRANSACTION_MARK_COLOR>> {
+entity "受注テーブル" as order <d_orders><<T,TRANSACTION_MARK_COLOR>> {
   + order_id [PK]
   --
-# customer_coode [FK]
+# item_coode [FK]
   purchase_date
   total_price
   }
 
-entity "購入詳細テーブル" as purchasedetail <d_purchase_detail><<T,TRANSACTION_MARK_COLOR>> {
+entity "受注明細テーブル" as orderdetail <d_orders_detail><<T,TRANSACTION_MARK_COLOR>> {
   + order_id [PK]
   + detail_id [PK]
   --
@@ -46,18 +46,15 @@ entity "商品マスタ" as items <m_items><<M,MASTER_MARK_COLOR>> {
   --
   item_name
   price
-# category_id [FK]
-  image
-  detail
-  del_flag
-  reg_date
+  num
 }
 
-entity "カテゴリマスタ" as category <m_category><<M,MASTER_MARK_COLOR>> {
-  + category_id [PK]
+entity "売却マスタ" as sell <m_sell><<M,MASTER_MARK_COLOR>> {
+  + item_id [PK]
   --
-  name
-  reg_date
+  price
+  num
+  image
 }
 
 customer  |o-ri-o{  purchase
