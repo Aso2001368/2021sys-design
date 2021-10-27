@@ -59,7 +59,7 @@ entity "売却マスタ" as sell <d_sell><<T,TRANSACTION_MARK_COLOR>> {
 }
 
 customer |o-ri-o{ order
-order |--ri-|{ orderdetail
+order ||-ri-|{ orderdetail
 orderdetail }-do-|| items
 items }o-le-|| sell
 
