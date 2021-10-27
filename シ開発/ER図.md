@@ -57,10 +57,10 @@ entity "売却マスタ" as sell <m_sell><<M,MASTER_MARK_COLOR>> {
   image
 }
 
-customer  |o-ri-o{  purchase
-purchase ||-ri-|{ purchasedetail
-purchasedetail }-do-|| items
-items }o-le-|| category
+customer  |o-ri-o{  order
+order ||-ri-|{ orderdetail
+orderdetail }-do-|| items
+items }o-le-|| sell
 
 }
 
