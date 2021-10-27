@@ -27,7 +27,7 @@ entity "顧客マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>> {
 entity "受注テーブル" as order <d_orders><<T,TRANSACTION_MARK_COLOR>> {
   + order_id [PK]
   --
-# item_coode [FK]
+# item_code [FK]
   purchase_date
   total_price
   }
@@ -47,10 +47,11 @@ entity "商品マスタ" as items <m_items><<M,MASTER_MARK_COLOR>> {
   item_name
   price
   num
+  image
 }
 
-entity "売却マスタ" as sell <m_sell><<M,MASTER_MARK_COLOR>> {
-  + item_id [PK]
+entity "売却マスタ" as sell <d_sell><<T,TRANSACTION_MARK_COLOR>> {
+  + item_code [PK]
   --
   price
   num
