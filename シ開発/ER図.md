@@ -36,7 +36,7 @@ entity "受注明細テーブル" as orderdetail <d_orders_detail><<T,TRANSACTIO
   + order_id [PK]
   + detail_id [PK]
   --
- # item_code [FK]
+ # item_code [FK]ta
   price
   num
 }
