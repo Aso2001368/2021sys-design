@@ -46,7 +46,6 @@ entity "商品マスタ" as items <m_items><<M,MASTER_MARK_COLOR>> {
   --
   item_name
   price
-  num
   image
 }
 
