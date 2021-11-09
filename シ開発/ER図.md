@@ -49,12 +49,11 @@ entity "商品マスタ" as items <m_items><<M,MASTER_MARK_COLOR>> {
   image
 }
 
-entity "売却マスタ" as sell <d_sell><<T,TRANSACTION_MARK_COLOR>> {
-  + item_code [PK]
+entity "書籍マスタ" as books <m_books><<M,MASTER_MARK_COLOR>> {
+  + books_id [PK]
   --
-  price
-  num
-  image
+  item_name
+  auther
 }
 
 
