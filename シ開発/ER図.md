@@ -44,7 +44,7 @@ entity "受注明細テーブル" as orderdetail <d_orders_detail><<T,TRANSACTIO
 entity "商品マスタ" as items <m_items><<M,MASTER_MARK_COLOR>> {
   + item_code [PK]
   --
-  item_name
+  # books_id[FK]
   price
   image
 }
@@ -56,6 +56,28 @@ entity "書籍マスタ" as books <m_books><<M,MASTER_MARK_COLOR>> {
   auther
 }
 
+entity "売却マスタ" as sell <d_sell><<T,TRANSACTION_MARK_COLOR>> {
+  + slip_code[PK]
+  --
+  # books_id[FK]
+  price
+  image
+}
+
+entity "売却明細マスタ" as selldetail <d_selldetail><<T,TRANSACTION_MARK_COLOR>> {
+  + slip_code[PK]
+  + slipdetail_code[PK]
+  --
+  # books_id[FK]
+  # item_code[FK]
+}
+
+customer  |o-ri-o{  order
+order ||-ri-|{ orderdetail
+orderdetail }-do-|| items
+items ||-le-|{ books
+books ||-le-|{ selldetail
+sell ||-ri-{ selldetail
 
 }
 
