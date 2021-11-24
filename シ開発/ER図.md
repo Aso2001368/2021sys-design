@@ -56,7 +56,7 @@ entity "書籍マスタ" as books <m_books><<M,MASTER_MARK_COLOR>> {
   auther
 }
 
-entity "売却マスタ" as sell <d_sell><<T,TRANSACTION_MARK_COLOR>> {
+entity "売却テーブル" as sell <d_sell><<T,TRANSACTION_MARK_COLOR>> {
   + slip_code[PK]
   --
   # books_id[FK]
@@ -64,7 +64,7 @@ entity "売却マスタ" as sell <d_sell><<T,TRANSACTION_MARK_COLOR>> {
   image
 }
 
-entity "売却明細マスタ" as selldetail <d_selldetail><<T,TRANSACTION_MARK_COLOR>> {
+entity "売却明細テーブル" as selldetail <d_selldetail><<T,TRANSACTION_MARK_COLOR>> {
   + slip_code[PK]
   + slipdetail_code[PK]
   --
